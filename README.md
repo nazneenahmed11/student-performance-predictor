@@ -1,42 +1,31 @@
-﻿# Student Performance Predictor
+# Student Performance Predictor
+
+Predicts whether a student will **pass or fail** based on exam scores and background features using Logistic Regression and Random Forest.
 
 ## Overview
-Small ML project to predict whether a student will **pass** or **fail** based on exam scores and demographic information using the StudentsPerformance dataset (Kaggle). 
+- Built a machine learning pipeline on the Kaggle *Students Performance in Exams* dataset.
+- Encodes categorical features, trains models, and evaluates using accuracy and cross-validation.
+- Includes confusion matrix and coefficient plots to interpret model decisions.
 
 ## Dataset
-- Source: Students Performance in Exams dataset (1,000 rows, 8 columns).  
-- Features: gender, race/ethnicity, parental level of education, lunch, test preparation course, and three exam scores (math, reading, writing).  
-
-## Approach
-- Loaded and explored the dataset using pandas (info, describe, distributions).
-- Engineered:
-  - `average_score` = mean of math, reading, writing scores.
-  - `passed` (target) = 1 if `average_score` ≥ 70, else 0.
-- One-hot encoded categorical variables and split data into train/test (80/20).
+- Source: Kaggle – StudentsPerformance in exams dataset.
+- 1000 rows, features like gender, race/ethnicity, parental education, lunch, test preparation, and three exam scores.
 
 ## Models
-- Logistic Regression  
-- Random Forest Classifier  
-
-## Results
-- Logistic Regression accuracy: **1.0** on test set.  
-- Random Forest accuracy: **1.0** on test set.
-
-> Note: This dataset is easy to separate; future work will use cross-validation and more robust evaluation.
+- Logistic Regression: mean CV accuracy ≈ 0.999, winner vs Random Forest.
+- Random Forest: mean CV accuracy ≈ 0.982 on the same encoded features.
+- Confusion matrix and coefficient/bar plots used for interpretability.
 
 ## How to Run
-1. Clone the repo:
-git clone https://github.com/nazneenahmed11/student-performance-predictor.git
+git clone <https://github.com/nazneenahmed11/student-performance-predictor>
 cd student-performance-predictor
-2. (Optional) Create and activate a virtual environment.
-3. Install dependencies:
-4. Open main.ipynb in VS Code / Jupyter and run the cells.
+python -m venv .venv
+..venv\Scripts\activate # Windows
+pip install -r requirements.txt
+jupyter notebook main.ipynb
 
-
-## Future Work
-- Add cross-validation scores.
-- Plot feature importance and interpret results.
-- Build a simple Streamlit UI for interactive predictions.
-
+## Results
+- Very high accuracy on pass/fail prediction.
+- Important factors include exam scores and preparation-related features (from coefficient analysis).
 
 
