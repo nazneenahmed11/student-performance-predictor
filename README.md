@@ -28,4 +28,21 @@ jupyter notebook main.ipynb
 - Very high accuracy on pass/fail prediction.
 - Important factors include exam scores and preparation-related features (from coefficient analysis).
 
+## Tech Stack
+- Python, Jupyter Notebook, VS Code
+- pandas, NumPy
+- scikit-learn (Logistic Regression, RandomForestClassifier)
+- matplotlib, seaborn
+- Git and GitHub for version control
+
+## Features
+- Exploratory data analysis (EDA) on a student performance dataset
+- Feature engineering and one-hot encoding for categorical variables
+- Two models: Logistic Regression and Random Forest
+- 5-fold cross-validation and model comparison (CV ~0.999 vs ~0.982)
+- Confusion matrix and coefficient/bar plots for model interpretability
+
+
+
+
 
