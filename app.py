@@ -1,19 +1,27 @@
-import streamlit as st
+import joblib
 import pandas as pd
+import streamlit as st
+
+rf_model = joblib.load("rf_model.joblib")
 
 st.title("Student Performance Predictor")
-st.write("Enter exam scores to see the prepared input (model hook will be added later).")
+st.write("Enter exam scores to see the prediction.")
 
-math = st.number_input("Math score", 0, 100, 70)
-reading = st.number_input("Reading score", 0, 100, 70)
-writing = st.number_input("Writing score", 0, 100, 70)
+math = st.slider("Math score", 0, 100, 70)
+reading = st.slider("Reading score", 0, 100, 70)
+writing = st.slider("Writing score", 0, 100, 70)
 
-if st.button("Show prepared input"):
-    df = pd.DataFrame([{
-        "math score": math,
-        "reading score": reading,
-        "writing score": writing
-    }])
-    st.success("Prepared input row:")
-    st.write(df)
+if st.button("Predict"):
+    input_df = pd.DataFrame({
+        'math score': [math],
+        'reading score': [reading],
+        'writing score': [writing]
+    })
+
+    pred = rf_model.predict(input_df)[0]   # 0 or 1 from your RF
+    result = "Pass ✅" if pred == 1 else "Fail ❌"
+
+    avg = (math + reading + writing) / 3
+    st.write(f"Average score: {avg:.1f}")
+    st.success(f"Model prediction: {result}")
 
