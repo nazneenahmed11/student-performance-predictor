@@ -18,10 +18,13 @@ Predicts whether a student will pass or fail based on their math, reading, and w
 
 
 ## How to Run
+
 pip install -r requirements.txt
 streamlit run app.py
-- Move sliders for math, reading, writing (0–100).
-- See average score (green/red based on 60% rule) and “Model prediction: Pass/Fail” from the trained model.
+
+- Move sliders for math, reading, and writing (0–100).
+- View the average score (green/red based on a 60% rule).
+- See the **model** prediction: “Pass ✅ / Fail ❌” from the trained RandomForest model.
 
 ## Results
 - Very high accuracy on pass/fail prediction.
@@ -40,11 +43,12 @@ streamlit run app.py
 - Exploratory data analysis (EDA) on a student performance dataset
 - Feature engineering and one-hot encoding for categorical variables
 - Two models: Logistic Regression and Random Forest
-- 5-fold cross-validation and model comparison (CV ~0.999 vs ~0.982)
+- 5-fold cross-validation and model comparison between Logistic Regression and Random Forest
 - Confusion matrix and coefficient/bar plots for model interpretability
 
 ## Screenshot
 ![App screenshot](https://github.com/user-attachments/assets/236bb40b-f1e2-499b-8540-0a0723611f1a)
+
 
 
 
