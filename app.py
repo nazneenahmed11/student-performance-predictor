@@ -22,6 +22,18 @@ if st.button("Predict"):
     result = "Pass ✅" if pred == 1 else "Fail ❌"
 
     avg = (math + reading + writing) / 3
-    st.write(f"Average score: {avg:.1f}")
+
+    if avg >= 60:
+        st.markdown(f"**Average score:** :green[{avg:.1f}]")
+    else:
+        st.markdown(f"**Average score:** :red[{avg:.1f}]")
+
     st.success(f"Model prediction: {result}")
+    st.caption(
+        "Note: The green/red average uses a fixed 60% rule; "
+        "the model prediction is based on patterns learned from data."
+    )
+
+    
+
 
