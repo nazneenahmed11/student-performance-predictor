@@ -1,5 +1,20 @@
 # Student Performance Predictor
 
+## 📊 Live Demo
+![Overview](assets/overview.png)
+![Overview Chart](assets/overview_chart.png)
+![Prediction Tab](assets/prediction.png)
+
+## 🔗 Links
+- GitHub: [your-repo-link]
+- Live App: [your-streamlit-link]
+
+---
+
+## Project Overview
+I built a machine learning app that predicts...
+
+
 Predicts whether a student will pass or fail based on their math, reading, and writing scores, using Logistic Regression and RandomForest, with a Streamlit web app for interaction.
 
 ## Overview
@@ -47,7 +62,14 @@ streamlit run app.py
 - Confusion matrix and coefficient/bar plots for model interpretability
 
 ## Screenshot
-![App screenshot](https://github.com/user-attachments/assets/236bb40b-f1e2-499b-8540-0a0723611f1a)
+![App screenshot](https://github.com/user-attachments/assets/e2903ab0-9e21-4dd8-bdda-67ab5501d7a8)
+![App screenshot](https://github.com/user-attachments/assets/69bd82d3-92e4-4506-9eb4-855a2d7b18eb)
+![App screenshot](https://github.com/user-attachments/assets/63a55c23-9ff8-4ce6-bb3c-487f804197d6)
+![App screenshot](https://github.com/user-attachments/assets/e6d1281a-f387-46d6-ab4f-b62515501972)
+
+
+
+
 
 
 
